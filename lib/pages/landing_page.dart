@@ -10,13 +10,10 @@ class LandingPage extends StatelessWidget {
     queryData = MediaQuery.of(context);
 
     return Scaffold(
-      body: Stack(
+      backgroundColor: const Color.fromRGBO(42, 42, 42, 1),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            decoration: const BoxDecoration(
-              color: Color.fromRGBO(42, 42, 42, 1),
-            ),
-          ),
           Container(
             margin: EdgeInsets.symmetric(
               horizontal: queryData.size.width / 10,
@@ -74,11 +71,7 @@ class LandingPage extends StatelessWidget {
               ],
             ),
           ),
-          Positioned(
-            child: Image.asset("assets/images/landing.png"),
-            bottom: 0,
-            right: 0,
-          )
+          Image.asset("assets/images/landing.png"),
         ],
       ),
     );
